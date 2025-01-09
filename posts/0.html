@@ -1,0 +1,295 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Blog of Haoming Liu | Blog of Haoming Liu</title><meta name="author" content="Haoming Liu"><meta name="copyright" content="Haoming Liu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="“如切如磋，如琢如磨。”">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Blog of Haoming Liu">
+<meta property="og:url" content="https://haom-liu.github.io/posts/0.html">
+<meta property="og:site_name" content="Blog of Haoming Liu">
+<meta property="og:description" content="“如切如磋，如琢如磨。”">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://haom-liu.github.io/img/icon.jpg">
+<meta property="article:published_time" content="2025-01-09T02:00:20.280Z">
+<meta property="article:modified_time" content="2025-01-09T02:00:20.280Z">
+<meta property="article:author" content="Haoming Liu">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://haom-liu.github.io/img/icon.jpg"><link rel="shortcut icon" href="/img/webicon.svg"><link rel="canonical" href="https://haom-liu.github.io/posts/0.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Blog of Haoming Liu',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  isShuoshuo: false
+}</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(/img/church.jpg);"></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Blog of Haoming Liu</span></a><a class="nav-page-title" href="/"><span class="site-name">Blog of Haoming Liu</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div></div></nav><div id="post-info"><h1 class="post-title">无标题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-01-09T02:00:20.280Z" title="发表于 2025-01-09 02:00:20">2025-01-09</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-01-09T02:00:20.280Z" title="更新于 2025-01-09 02:00:20">2025-01-09</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>“如切如磋，如琢如磨。”                                                                                                   </p>
+<p>                                                                                                                                            ——题记</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>“闲来无事不从容，睡觉东窗日已红。”终于盼来了闲暇时光，笔者打算重新整理一下对计算思维的理解。笔者选择的参考书是吴军博士的《计算之魂》，这次算是第三遍学习这本书。第一遍是在《计算之魂》新书发售时，就着新鲜感看完的，只能算观其大略。第二遍是在去年寒假前找实习时，再读一遍，对计算思维有了些许心得，在面试过程中虽然代码写得笨拙但思路基本正确。我认为这本书是很值得反复品味的，里边不仅有对计算思维的解读，还有吴军博士在其工作生涯中的心得体会，常读而常新也。</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>这篇文章的目的是基于书中<strong>例题1.3 总和最大区间问题</strong>，来剖析算法优化的方向和如何设计出一个好的算法。</p>
+<blockquote>
+<p>本文所用到的完整代码可访问笔者仓库获取：<a target="_blank" rel="noopener" href="https://github.com/haom-liu/Algorithm">https://github.com/haom-liu/Algorithm</a></p>
+</blockquote>
+<h3 id="算法优化的方法"><a href="#算法优化的方法" class="headerlink" title="算法优化的方法"></a>算法优化的方法</h3><p>算法优化最常用的方法是<strong>找出计算中的无用功</strong>。以本题为例，本文列举出书中给出的四种算法，其复杂度分别为$O(N^3)$、$O(N^2)$、$O(N\log N)$、$O(N)$。笔者将逐层分析算法中的无用功，保持思维上的连贯性，给出非$O(N)$复杂度的算法如何优化到$O(N)$。在本文的附录中，笔者会分析书中复杂度为$O(N\log N)$算法的无用功，并给出优化方法。笔者在本文进行了较多的数学分析，希望帮助读者理解。</p>
+<blockquote>
+<p><strong>题目描述：</strong></p>
+<p>给定一个实数序列，设计一个最有效的算法，找到一个总和最大的区间。</p>
+</blockquote>
+<p>例如给定序列：</p>
+<table>
+<thead>
+<tr>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+<th align="center">5</th>
+<th align="center">6</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1.5</td>
+<td align="center">-12.3</td>
+<td align="center">3.2</td>
+<td align="center">-5.5</td>
+<td align="center">23.2</td>
+<td align="center">3.2</td>
+<td align="center">-1.4</td>
+</tr>
+<tr>
+<td align="center"><strong>7</strong></td>
+<td align="center"><strong>8</strong></td>
+<td align="center"><strong>9</strong></td>
+<td align="center"><strong>10</strong></td>
+<td align="center"><strong>11</strong></td>
+<td align="center"><strong>12</strong></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">-12.2</td>
+<td align="center">34.2</td>
+<td align="center">5.4</td>
+<td align="center">-7.8</td>
+<td align="center">1.1</td>
+<td align="center">-4.9</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p>其中总和最大区间为$[4, 9]$。</p>
+<p>接下来按照复杂度从高到低依次介绍各种可行的算法，并分析算法中可以优化的步骤。</p>
+<h3 id="O-N-3-算法"><a href="#O-N-3-算法" class="headerlink" title="$O(N^3)$算法"></a>$O(N^3)$算法</h3><p>这种方法是做三重循环，需要三个指针$i$、$j$、$k$，其中$i$指向区间左端点，$j$指向区间右端点，$k$用于从左端点到右端点进行遍历求和。因此最好和最坏情况下，该算法的时间复杂度都是$O(N^3)$。</p>
+<p>C++实现如下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt; <span class="title">op1</span><span class="params">(<span class="type">const</span> vector&lt;<span class="type">float</span>&gt;&amp; input)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">auto</span> maxx = input[<span class="number">0</span>];</span><br><span class="line">    <span class="type">int</span> left = <span class="number">0</span>, right = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; input.<span class="built_in">size</span>(); ++i)</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = i; j &lt; input.<span class="built_in">size</span>(); ++j) &#123;</span><br><span class="line">            <span class="type">float</span> sum = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> k = i; k &lt;= j; ++k) &#123;</span><br><span class="line">                sum += input[k];</span><br><span class="line">                <span class="keyword">if</span> (sum &gt; maxx) &#123;</span><br><span class="line">                    maxx = sum;</span><br><span class="line">                    left = i;</span><br><span class="line">                    right = j;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> &#123;left, right&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>用$S[i, j]$表示数组$A$从下标$i$到$j$的区间和。这个算法的无用功在于，当我们求$S[i, j]$时，每次都要指针$k$从$i$到$j$遍历求和一遍，这个过程的复杂度为$O(N)$。但$S[i, j] &#x3D; S[i, j - 1] + A[j]$，当$j - 1 &gt; i$时，$S[i,j - 1]$在上一次循环时已经求出来了，此处再进行从头遍历计算就造成了不必要的浪费。</p>
+<p>所以如果能把区间求和操作从$O(N)$优化到$O(1)$，那么算法整体的复杂度就会从$O(N^3)$优化到$O(N^2)$。优化途径通常有两种。一种是使用前缀和，看是否保留原始信息决定是否要开辟额外空间。若要保留数组信息，空间复杂度由$O(1)$变为$O(N)$，但时间复杂度由$O(N^3)$降到$O(N^2)$，算是以空间换时间。另一种方法是不需要开额外的空间，由于求和过程具有连续性，只需使用上一次的计算结果用于本次计算，空间复杂度仍为$O(1)$，时间复杂度变为$O(N^2)$。</p>
+<p>这就产生了以下两种时间复杂度为$O(N^2)$的二重循环方法。</p>
+<h3 id="O-N-2-算法"><a href="#O-N-2-算法" class="headerlink" title="$O(N^2)$算法"></a>$O(N^2)$算法</h3><h4 id="最好和最坏情况都是-O-N-2-算法"><a href="#最好和最坏情况都是-O-N-2-算法" class="headerlink" title="最好和最坏情况都是$O(N^2)$算法"></a>最好和最坏情况都是$O(N^2)$算法</h4><p>这种方法就是把三重循环里的区间求和过程从$O(N)$优化到$O(1)$，有如下两种操作。</p>
+<p><strong>前缀和优化</strong></p>
+<p>前缀和可以在$O(1)$复杂度下，求出数组任意长度的区间总和。若不需要保留原始数组信息，可以直接用原来的数组空间求出前缀和；否则，需要额外开辟$N$个空间，用来记录前缀和。</p>
+<p>C++实现如下：</p>
+<ul>
+<li>直接使用数组空间计算前缀和</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">std::pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt; <span class="title">op2_1_1</span><span class="params">(std::vector&lt;<span class="type">float</span>&gt;&amp; input)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 直接使用原来数组空间记录前缀和，原数组信息会被覆盖</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; input.<span class="built_in">size</span>(); ++i) </span><br><span class="line">        input[i] += input[i - <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">auto</span> maxx = input[<span class="number">0</span>];</span><br><span class="line">    <span class="type">int</span> left = <span class="number">0</span>, right = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; input.<span class="built_in">size</span>(); ++i)</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = i; j &lt; input.<span class="built_in">size</span>(); ++j) &#123;</span><br><span class="line">            <span class="comment">// 使用前缀和计算区间和，时间复杂度O(1)</span></span><br><span class="line">            <span class="keyword">auto</span> sum = input[j] - (i == <span class="number">0</span> ? <span class="number">0</span> : input[i - <span class="number">1</span>]);</span><br><span class="line">            <span class="keyword">if</span> (sum &gt; maxx) &#123;</span><br><span class="line">                maxx = sum;</span><br><span class="line">                left = i;</span><br><span class="line">                right = j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> &#123;left, right&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>额外开辟$N$个空间记录前缀和</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">std::pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt; <span class="title">op2_1_2</span><span class="params">(std::vector&lt;<span class="type">float</span>&gt;&amp; input)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 使用额外数组记录前缀和，原数组信息不会被覆盖，空间复杂度O(N)</span></span><br><span class="line">    <span class="function">std::vector&lt;<span class="type">float</span>&gt; <span class="title">prefix_sum</span><span class="params">(input.size(), <span class="number">0</span>)</span></span>;</span><br><span class="line">    prefix_sum[<span class="number">0</span>] = input[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; input.<span class="built_in">size</span>(); ++i) &#123;</span><br><span class="line">        prefix_sum[i] = prefix_sum[i - <span class="number">1</span>] + input[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">auto</span> maxx = input[<span class="number">0</span>];</span><br><span class="line">    <span class="type">int</span> left = <span class="number">0</span>, right = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; input.<span class="built_in">size</span>(); ++i)</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = i; j &lt; input.<span class="built_in">size</span>(); ++j) &#123;</span><br><span class="line">            <span class="comment">// 使用前缀和计算区间和，时间复杂度O(1)</span></span><br><span class="line">            <span class="keyword">auto</span> sum = prefix_sum[j] - (i == <span class="number">0</span> ? <span class="number">0</span> : prefix_sum[i - <span class="number">1</span>]); </span><br><span class="line">            <span class="keyword">if</span> (sum &gt; maxx) &#123;</span><br><span class="line">                maxx = sum;</span><br><span class="line">                left = i;</span><br><span class="line">                right = j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> &#123;left, right&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>使用前一次的计算结果进行优化</strong></p>
+<p>由于二重循环计算区间和具有连续性，当计算$S[i, j]$时，因为$S[i, j] &#x3D; S[i, j - 1] + A[j]$，其中$S[i, j - 1]$刚好是上一次计算得到的区间$[i, j - 1]$的总和，可以直接拿来帮助本次计算，就无需从头进行遍历求和。在遍历区间右端点的过程中，由于变量$sum$已经保留了区间$[i, j - 1]$的计算结果，本次区间和的计算结果就是$sum + A[j]$。</p>
+<p>C++实现如下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">std::pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt; <span class="title">op2_2</span><span class="params">(std::vector&lt;<span class="type">float</span>&gt;&amp; input)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">auto</span> maxx = input[<span class="number">0</span>];</span><br><span class="line">    <span class="type">int</span> left = <span class="number">0</span>, right = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; input.<span class="built_in">size</span>(); ++i) &#123;</span><br><span class="line">        <span class="type">float</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = i; j &lt; input.<span class="built_in">size</span>(); ++j) &#123;</span><br><span class="line">            sum += input[j];</span><br><span class="line">            <span class="keyword">if</span> (sum &gt; maxx) &#123;</span><br><span class="line">                maxx = sum;</span><br><span class="line">                left = i;</span><br><span class="line">                right = j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> &#123;left, right&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h6 id="分析-1"><a href="#分析-1" class="headerlink" title="分析"></a>分析</h6><p>二重循环的浪费主要在确立区间端点上。浪费在哪里可以通过挖掘遍历过程中的求和结果看出。当确立左端点$i&#x3D;0$时，$j&#x3D;0, 1, \cdots, 12$的区间和结果如下图所示（下图其实就是数组的前缀和）。</p>
+<img src="../img/2024-12-31-11-54-04-image.png" title="" alt="" data-align="center">
+
+<p>以下基于<strong>前缀和</strong>的思想进行分析。</p>
+<p>首先进行定义：</p>
+<p>$S[i, j]$表示数组$A$从下标$i$到下标$j$的元素之和，$i \leq j$。</p>
+<p>当$i &#x3D; 0$时，$S[i, j] &#x3D; S[0, j]$；</p>
+<p>当$i &gt; 0$时，$S[i, j] &#x3D; S[0, j] - S[0, i - 1]$。</p>
+<p>可以看出当$j&#x3D;9$时，前向累积和已经达到最大。因此当$i \leq 9$时，$S[i, 9]$是最大的，此时令$j &gt; 9$，<strong>计算$S[i, j]$就是无谓的浪费</strong>。</p>
+<p>证明如下：</p>
+<p>$\because 当0 &lt; i \leq 9时，S[i, j] &#x3D; S[0, j] - S[0, i - 1]$</p>
+<p>由于$S[0, 9] \geq S[0, j]， j &#x3D; 1, 2, \cdots, 12$</p>
+<p>$\therefore S[i, j] \leq S[0, 9] - S[0, i - 1]$</p>
+<p>同理可证$i &#x3D; 0$的情况。</p>
+<h4 id="最好情况-O-N-，最坏情况-O-N-2-算法"><a href="#最好情况-O-N-，最坏情况-O-N-2-算法" class="headerlink" title="最好情况$O(N)$，最坏情况$O(N^2)$算法"></a>最好情况$O(N)$，最坏情况$O(N^2)$算法</h4><p>基于上述分析，当左端点$i \leq 9$时，确定了总和最大区间的右端点就是$j &#x3D; 9$，在该段区间上总和最大区间只能是$[i, 9]$。此时总和最大区间可能的位置被$j &#x3D; 9$劈成两部分，分为$[i, 9],(i \leq 9)$或者$[i, j], (i &gt; 9)$。</p>
+<p>在$[i, 9]$的区间上，如何确定总和最大区间的左端点$i$呢？由公式$S[i, j] &#x3D; S[0, 9] - S[0, i - 1]$可知，当$S[0, i - 1]$最小时，$S[i, j]$最大。因此只要从右端点$j &#x3D; 9$开始向前遍历，找到前向累积和最小的位置$k &#x3D; 3$，则左端点$i &#x3D; k + 1 &#x3D; 4$。</p>
+<p><strong>但是</strong>，这时只求出了局部的总和最大区间。即在区间$[0, 9]$上，确定了该区间上的总和最大区间为$[4, 9]$。但是区间$[4, 9]$是否为全局的总和最大区间需要进一步验证。另一个总和最大区间可能的位置在区间$[10, 12]$，因此还需要在该段区间上找出总和最大区间。最后比较找出的所有备选总和最大区间，哪一段的区间和最大，则该段区间为全局的总和最大区间。</p>
+<p>如何在找出区间$[10, 12]$的总和最大区间？跟之前的方法一样，从位置$10$开始，向后找前向累计和最大的位置，该位置即为新的总和最大区间的右端点，再前向遍历找到左端点。此时区间$[10, 12]$仍可能被从$10$开始前向累计和最大的位置分成两部分，还需要在后一部分继续找可能的总和最大区间。最后就变成了一个不断减少搜索区间，一段一段找潜在总和最大区间的递归问题。最后比较所有备选区间的区间和，得出全局总和最大区间。</p>
+<p>这种方式的时间复杂度是多少呢？最好情况是$O(N)$，最坏情况是$O(N^2)$。</p>
+<p>首先分析最好情况。最好情况是数组的末端位置就是前向累计和最大的位置，只需反向遍历一遍确立左端点。此时共遍历两次序列，复杂度为$O(N)$。</p>
+<p>再来分析最坏情况。因为每次要确立区间总和最大区间的右端点，都要让$j$从新区间开始的位置，一直遍历到数组的末端，才能找出最大值。举一个特殊的样例，$3, 10, -10, 8, -8, 7, -9, 6, -9, 5, -5, 4$，其前向累计和如下图所示。</p>
+<img src="../img/2025-01-01-10-50-25-image.png" title="" alt="" data-align="center">
+
+<p>可以看出，从第一个位置开始以两个数为一组，每组数中第一个数小于第二个数，第二个数是后边所有数的最大值。此时$j$平均要遍历$\lceil\frac{N}{2}\rceil$趟，平均每趟遍历长度为$\frac{N}{2} + 1$，总复杂度就为二者乘积，是$O(N^2)$。</p>
+<p>C++实现如下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 正向遍历数组，记录前缀和，找到最大值，为右端点，然后反向遍历找到最小值，确立左端点。之后对下一段区间重复上述过程，最好情况时间复杂度O(N)，最坏情况时间复杂度O(N^2)</span></span><br><span class="line"><span class="function">std::pair&lt;<span class="type">size_t</span>, <span class="type">size_t</span>&gt; <span class="title">op2_2</span><span class="params">(<span class="type">const</span> std::vector&lt;<span class="type">float</span>&gt;&amp; input)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">assert</span>(!input.<span class="built_in">empty</span>());</span><br><span class="line">    <span class="comment">// 求前缀和</span></span><br><span class="line">    <span class="function">std::vector&lt;<span class="type">float</span>&gt; <span class="title">prefix_sum</span><span class="params">(input.size() + <span class="number">1</span>, <span class="number">0</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 为了方便，下标从1开始，prefix_sum[0] = 0</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">size_t</span> i = <span class="number">1</span>; i &lt;= input.<span class="built_in">size</span>(); ++i) prefix_sum[i] = prefix_sum[i - <span class="number">1</span>] + input[i - <span class="number">1</span>];</span><br><span class="line">    <span class="comment">// 从头开始遍历，找到前缀和的最大值</span></span><br><span class="line">    <span class="keyword">auto</span> maxx = prefix_sum[<span class="number">1</span>];</span><br><span class="line">    <span class="type">size_t</span> left = <span class="number">0</span>, right = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// 记录最大值的位置</span></span><br><span class="line">    <span class="type">size_t</span> max_pos = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (max_pos &lt; prefix_sum.<span class="built_in">size</span>() - <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">auto</span> pre_pos = max_pos;</span><br><span class="line">        <span class="keyword">auto</span> cur_maxx = prefix_sum[max_pos + <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">size_t</span> j = max_pos + <span class="number">1</span>; j &lt; prefix_sum.<span class="built_in">size</span>(); ++j) &#123;</span><br><span class="line">            <span class="keyword">if</span> (prefix_sum[j] &gt;= cur_maxx) &#123;</span><br><span class="line">                cur_maxx = prefix_sum[j];</span><br><span class="line">                max_pos = j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 从最大值位置开始反向遍历，找到前缀和的最小值</span></span><br><span class="line">        <span class="keyword">auto</span> minn = prefix_sum[max_pos];</span><br><span class="line">        <span class="type">size_t</span> min_pos = max_pos;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">size_t</span> i = min_pos; i &gt;= pre_pos; --i) &#123;</span><br><span class="line">            <span class="keyword">if</span> (prefix_sum[i - <span class="number">1</span>] &lt; minn) &#123;</span><br><span class="line">                minn = prefix_sum[i - <span class="number">1</span>];</span><br><span class="line">                min_pos = i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (prefix_sum[max_pos] - prefix_sum[min_pos - <span class="number">1</span>] &gt; maxx) &#123;</span><br><span class="line">            maxx = prefix_sum[max_pos] - prefix_sum[min_pos - <span class="number">1</span>];</span><br><span class="line">            left = min_pos;</span><br><span class="line">            right = max_pos;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> &#123;left - <span class="number">1</span>, right - <span class="number">1</span>&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="分析-2"><a href="#分析-2" class="headerlink" title="分析"></a>分析</h5><p>要分析这个算法的无用功做在什么地方，从最坏情况入手即可。比起最好情况，计算浪费在在确立剩余部分的总和最大区间时，每次要遍历剩余部分的最大值找到右端点，而最大值刚好呈递减的趋势。实际上继续遍历最大值位置之后的区间是一种浪费。仔细想一下，为什么最大值位置$j$之后的所有位置，其前向累计和都小于$S[i, j]$？</p>
+<p>通过数学分析，上述表达即</p>
+<p>$S[i, j] + S[j + 1, m] &lt; S[l, j]$，其中$j &lt; m \leq r$，$r$为整个序列的末端位置。</p>
+<p>显然对$\forall m \in (j, r]$，均有$S[j + 1, m] &lt; 0$。</p>
+<p>发现这个规律，可以进行<strong>逆向思考</strong>。与其找剩余部分的最大值，不如找剩余区间从哪里开始到序列末尾位置的区间和小于$0$（因为末端位置$r \in (j, r]$，而位置$r$能提供位计算便利上的优越性），就在哪里停止。数学表达即为当$S[0, r] - S[0, j + 1] &lt; 0$时，$j$即为所要找的剩余区间前向累计和最大值所在的位置。而之前算法里继续遍历$[j + 1, r]$中的所有位置就是一种计算上的浪费。</p>
+<h3 id="O-N-算法"><a href="#O-N-算法" class="headerlink" title="$O(N)$算法"></a>$O(N)$算法</h3><p>这种方法就是延续上述分析，在遍历区间时，通过判断$S[0, r] - S[0, j + 1]$是否小于$0$，来确定$j$是否要停止向后遍历，节省了$O(N^2)$算法中每一次都要$j$遍历到数组末端位置的浪费。因此该算法最好和最坏情况下的时间复杂度都是$O(N)$，$j$从头开始正向遍历，$i$在每一段子区间从$j$开始进行反向遍历，总共的计算复杂度只有两趟遍历。</p>
+<p>C++实现如下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">std::pair&lt;<span class="type">size_t</span>, <span class="type">size_t</span>&gt; <span class="title">op3_1</span><span class="params">(<span class="type">const</span> std::vector&lt;<span class="type">float</span>&gt;&amp; input)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">assert</span>(!input.<span class="built_in">empty</span>());</span><br><span class="line">    <span class="type">size_t</span> left = <span class="number">0</span>, right = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">auto</span> maxx = input[<span class="number">0</span>];</span><br><span class="line">    <span class="comment">// 计算前向累计和</span></span><br><span class="line">    <span class="function">std::vector&lt;<span class="type">float</span>&gt; <span class="title">prefix_sum</span><span class="params">(input.size() + <span class="number">1</span>, <span class="number">0</span>)</span></span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">size_t</span> i = <span class="number">1</span>; i &lt;= input.<span class="built_in">size</span>(); ++i) prefix_sum[i] = prefix_sum[i - <span class="number">1</span>] + input[i - <span class="number">1</span>];</span><br><span class="line">    <span class="type">size_t</span> pre = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">size_t</span> j = pre; j &lt; prefix_sum.<span class="built_in">size</span>(); ++j) &#123;</span><br><span class="line">        <span class="keyword">if</span> (prefix_sum[prefix_sum.<span class="built_in">size</span>() - <span class="number">1</span>] - prefix_sum[j + <span class="number">1</span>] &lt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">size_t</span> i = j; i &gt;= pre; --i) &#123;</span><br><span class="line">                <span class="keyword">if</span> (prefix_sum[j] - prefix_sum[i - <span class="number">1</span>] &gt; maxx) &#123;</span><br><span class="line">                    maxx = prefix_sum[j] - prefix_sum[i - <span class="number">1</span>];</span><br><span class="line">                    left = i - <span class="number">1</span>;</span><br><span class="line">                    right = j - <span class="number">1</span>;  </span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> &#123;left, right&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个算法仍可以进行<strong>逆向思考</strong>。如果从位置$i$开始，到位置$j$时，有$S[i, j] &lt; 0$。可以认定区间$[i, j]$对位置$j$之后的区间不会有贡献。那么当前只需计算区间$[i, j]$的总和最大区间即可，该区间作为参与竞争全局总和最大区间的一个备选区间。这种情况下不会出现$\exists m \in (i, j]$，使得$S[m, j] &gt; 0$。因为$S[i, j] &#x3D; S[i, m - 1] + S[m, j]$，并且$S[i, j] &lt; 0$，$S[m, j] &gt; 0$，必然有$S[i, m - 1] &lt; 0$。因此在$m - 1$位置时，就已经计算$[i, m - 1]$里的总和最大区间了。之后从位置$j + 1$开始，同样进行上述操作。最终可能会得到多个备选区间，只需挑出备选区间中区间和最大的一个即可。也可以在选择时就进行排除，区间和小于当前已发现的最大区间和就进行丢弃。该算法即为书中提到的最优算法。</p>
+<p>使用上述算法该如何确定区间$[i, j]$的总和最大区间呢？与之前的算法类似，从位置$i$开始，使得$S[i, m]$最大的位置$m$即为区间的右端点。跟之前分析的最大值的作用类似，是因为$S[m + 1, n] &lt; 0$，$m + 1 &lt; n \leq j$，即从位置$i$开始，前向累计和最大位置之后的区间均对前半部分没有贡献。而区间的左端点实际上就是$i$，因为假设存在一点$p \in (i, m]$，使得区$[i, j]$上的总和最大区间是$[p, m]$。而条件可以肯定的是对$\forall \lambda \in [i, j]$，均有$S[i, \lambda] \geq 0$，所以$S[i, p - 1] \geq 0$。因为$S[i, m] &#x3D; S[i, p - 1] + S[p, m]$，必然存在$[i, m]$的区间和大于$[p, m]$的区间和，假设不成立。所以区间$[i, j]$上的总和最大区间的左端点为$i$，右端点即为从位置$i$开始前向累计和最大的位置。</p>
+<p>C++实现如下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">std::pair&lt;<span class="type">size_t</span>, <span class="type">size_t</span>&gt; <span class="title">op3_2</span><span class="params">(<span class="type">const</span> std::vector&lt;<span class="type">float</span>&gt;&amp; input)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">assert</span>(!input.<span class="built_in">empty</span>());</span><br><span class="line">    <span class="type">size_t</span> left = <span class="number">0</span>, right = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">auto</span> maxx = input[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">auto</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="type">size_t</span> pre = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">size_t</span> j = <span class="number">0</span>; j &lt; input.<span class="built_in">size</span>(); ++j) &#123;</span><br><span class="line">        sum += input[j];</span><br><span class="line">        <span class="keyword">if</span> (sum &gt; maxx) &#123;</span><br><span class="line">            maxx = sum;</span><br><span class="line">            right = j;</span><br><span class="line">            left = pre;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (sum &lt; <span class="number">0</span>) &#123;</span><br><span class="line">            sum = <span class="number">0</span>;</span><br><span class="line">            pre = j + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> &#123;left, right&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>该算法只需一趟正向遍历。最好和最坏情况均为$O(N)$，空间复杂度为$O(1)$。而之前的算法中，凡是需要用到前缀和的，在不破坏原有输入的情况下，均需要$O(N)$的空间复杂度。</p>
+<p>根据估算，求序列总和最大区间，至少需要遍历一趟序列，因此$O(N)$复杂度已是求解该问题的复杂度上限，已无优化的可能。</p>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>经过上述分析，可以得出拿到一个问题时进行有效分析的步骤：</p>
+<ol>
+<li><p>对问题计算复杂度的边界有大概的认识。以本文例题为例，求序列总和最大区间，至少要遍历一趟序列，因此复杂度的上限就是$O(N)$。而当我们想出一种求解问题的可行算法时，如果是$O(N^2)$或者$O(N^3)$的算法，基于对问题计算复杂度边界的认识，我们可以知道算法仍有可以优化的空间。</p>
+</li>
+<li><p>优化一个算法，最常用的方法是检查算法里是否存在计算上的无用功。比如本文的分析中，$O(N^3)$算法中计算区间和需要从头到尾遍历是在做无用功，$O(N^2)$算法中确定区间左右端点时做了大量无用功。借助数学工具和逻辑推理，将逻辑思考通过数学语言表达，并且能够将一个命题转化为另一个相对容易的等价命题，能够有效检查出计算上的无用功。</p>
+</li>
+<li><p>分析问题时，逆向思考或许会带来意想不到的惊喜。很多时候正向思考遇到麻烦或者步骤繁琐，逆向思考或许能迎刃而解。</p>
+</li>
+</ol>
+<h2 id="附录-对书中-O-N-log-N-算法的优化"><a href="#附录-对书中-O-N-log-N-算法的优化" class="headerlink" title="附录 对书中$O(N\log N)$算法的优化"></a>附录 对书中$O(N\log N)$算法的优化</h2><p>书中讲到的$O(N \log N)$算法是基于分治的思想，将一个大区间分为两段子区间，然后求子区间的总和最大区间。此时整个序列的总和最大区间所在的位置可能有三种情况。具体步骤本文不多赘述，书里讲的比较详细。下边给出该算法的代码实现。</p>
+<p>C++实现如下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">std::pair&lt;<span class="type">size_t</span>, <span class="type">size_t</span>&gt; <span class="title">op4_1</span><span class="params">(<span class="type">const</span> std::vector&lt;<span class="type">float</span>&gt;&amp; input, <span class="type">size_t</span> left, <span class="type">size_t</span> right)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">assert</span>(!input.<span class="built_in">empty</span>());</span><br><span class="line">    <span class="keyword">if</span> (left == right) <span class="keyword">return</span> &#123;left, right&#125;;</span><br><span class="line">    <span class="keyword">auto</span> mid = (left + right) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">auto</span> left_pair = <span class="built_in">op4_1</span>(input, left, mid);</span><br><span class="line">    <span class="keyword">auto</span> right_pair = <span class="built_in">op4_1</span>(input, mid + <span class="number">1</span>, right);</span><br><span class="line">    <span class="keyword">auto</span> left_l = left_pair.first, left_r = left_pair.second;</span><br><span class="line">    <span class="keyword">auto</span> right_l = right_pair.first, right_r = right_pair.second;</span><br><span class="line">    <span class="type">float</span> left_sum = <span class="number">0</span>, right_sum = <span class="number">0</span>, cross_sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">size_t</span> i = left_l; i &lt;= left_r; ++i) left_sum += input[i];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">size_t</span> i = right_l; i &lt;= right_r; ++i) right_sum += input[i];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">size_t</span> i = left_l; i &lt;= right_r; ++i) cross_sum += input[i];</span><br><span class="line">    <span class="keyword">if</span> (left_r == mid &amp;&amp; right_l == mid + <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">if</span> (left_sum &gt; <span class="number">0</span> &amp;&amp; right_sum &gt; <span class="number">0</span>) <span class="keyword">return</span> &#123;left_l, right_r&#125;;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (left_sum &gt; right_sum) <span class="keyword">return</span> &#123;left_l, left_r&#125;;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> &#123;right_l, right_r&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (left_sum &gt; right_sum &amp;&amp; left_sum &gt; cross_sum) <span class="keyword">return</span> &#123;left_l, left_r&#125;;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (right_sum &gt; left_sum &amp;&amp; right_sum &gt; cross_sum) <span class="keyword">return</span> &#123;right_l, right_r&#125;;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> &#123;left_l, right_r&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="分析-3"><a href="#分析-3" class="headerlink" title="分析"></a>分析</h3><p>这个算法对于$O(N^3)$算法的优化在于，将确定区间左右端点从$O(N^2)$降到$O(\log N)$，但求区间和时仍然使用遍历求和的方式。根据之前的优化策略，求区间和可以使用前缀和数组在$O(1)$复杂度计算出结果。因此优化后的整个算法，首先求前缀和数组需要一趟遍历，复杂度为$O(N)$；之后使用分治算法确定区间左右端点的复杂度为$O(\log N)$。因此整体的复杂度为$O(N)$。</p>
+<p>优化后的C++代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">std::pair&lt;<span class="type">size_t</span>, <span class="type">size_t</span>&gt; _op4_2(<span class="type">const</span> std::vector&lt;<span class="type">float</span>&gt;&amp; input, <span class="type">const</span> std::vector&lt;<span class="type">float</span>&gt;&amp; prefix_sum, <span class="type">size_t</span> left, <span class="type">size_t</span> right) &#123;</span><br><span class="line">    <span class="keyword">if</span> (left == right) <span class="keyword">return</span> &#123;left, right&#125;;</span><br><span class="line">    <span class="keyword">auto</span> mid = (left + right) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">auto</span> left_pair = _op4_2(input, prefix_sum, left, mid);</span><br><span class="line">    <span class="keyword">auto</span> right_pair = _op4_2(input, prefix_sum, mid + <span class="number">1</span>, right);</span><br><span class="line">    <span class="keyword">auto</span> left_l = left_pair.first, left_r = left_pair.second;</span><br><span class="line">    <span class="keyword">auto</span> right_l = right_pair.first, right_r = right_pair.second;</span><br><span class="line">    <span class="keyword">auto</span> left_sum = prefix_sum[left_r + <span class="number">1</span>] - prefix_sum[left_l];</span><br><span class="line">    <span class="keyword">auto</span> right_sum = prefix_sum[right_r + <span class="number">1</span>] - prefix_sum[right_l];</span><br><span class="line">    <span class="keyword">auto</span> cross_sum = prefix_sum[right_r + <span class="number">1</span>] - prefix_sum[left_l];</span><br><span class="line">    <span class="keyword">if</span> (left_sum &gt; right_sum &amp;&amp; left_sum &gt; cross_sum) <span class="keyword">return</span> &#123;left_l, left_r&#125;;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (right_sum &gt; left_sum &amp;&amp; right_sum &gt; cross_sum) <span class="keyword">return</span> &#123;right_l, right_r&#125;;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> &#123;left_l, right_r&#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">std::pair&lt;<span class="type">size_t</span>, <span class="type">size_t</span>&gt; <span class="title">op4_2</span><span class="params">(<span class="type">const</span> std::vector&lt;<span class="type">float</span>&gt;&amp; input)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">assert</span>(!input.<span class="built_in">empty</span>());</span><br><span class="line">    <span class="comment">// 计算前缀和</span></span><br><span class="line">    <span class="function">std::vector&lt;<span class="type">float</span>&gt; <span class="title">prefix_sum</span><span class="params">(input.size() + <span class="number">1</span>, <span class="number">0</span>)</span></span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">size_t</span> i = <span class="number">1</span>; i &lt;= input.<span class="built_in">size</span>(); ++i) prefix_sum[i] = prefix_sum[i - <span class="number">1</span>] + input[i - <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">return</span> _op4_2(input, prefix_sum, <span class="number">0</span>, input.<span class="built_in">size</span>() - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>最后，为了体会算法复杂度的巨大差异，在万级的数据规模上测试各个算法的执行用时。</p>
+<p>当数据量为$10, 000$时，各算法的执行时间如下：</p>
+<img src="../img/2025-01-08-22-49-32-image.png" title="" alt="" data-align="center">
+
+<p>在数据量为$100, 000$时，除了三重循环算法，各算法的执行时间如下：</p>
+<img src="../img/2025-01-08-22-51-47-image.png" title="" alt="" data-align="center">
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://haom-liu.github.io">Haoming Liu</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://haom-liu.github.io/posts/0.html">https://haom-liu.github.io/posts/0.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://haom-liu.github.io" target="_blank">Blog of Haoming Liu</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/img/icon.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/posts/4a17b156.html" title="Hello World"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Hello World</div></div><div class="info-2"><div class="info-item-1">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;  More info: Writing Run server1$ hexo server  More info: Server Generate static files1$ hexo generate  More info: Generating Deploy to remote sites1$ hexo deploy  More info: Deployment </div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/icon.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Haoming Liu</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/haom-liu"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A3%E6%96%87"><span class="toc-number">2.</span> <span class="toc-text">正文</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E4%BC%98%E5%8C%96%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">2.1.</span> <span class="toc-text">算法优化的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#O-N-3-%E7%AE%97%E6%B3%95"><span class="toc-number">2.2.</span> <span class="toc-text">$O(N^3)$算法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E6%9E%90"><span class="toc-number">2.2.1.</span> <span class="toc-text">分析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#O-N-2-%E7%AE%97%E6%B3%95"><span class="toc-number">2.3.</span> <span class="toc-text">$O(N^2)$算法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%80%E5%A5%BD%E5%92%8C%E6%9C%80%E5%9D%8F%E6%83%85%E5%86%B5%E9%83%BD%E6%98%AF-O-N-2-%E7%AE%97%E6%B3%95"><span class="toc-number">2.3.1.</span> <span class="toc-text">最好和最坏情况都是$O(N^2)$算法</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%88%86%E6%9E%90-1"><span class="toc-number">2.3.1.0.1.</span> <span class="toc-text">分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%80%E5%A5%BD%E6%83%85%E5%86%B5-O-N-%EF%BC%8C%E6%9C%80%E5%9D%8F%E6%83%85%E5%86%B5-O-N-2-%E7%AE%97%E6%B3%95"><span class="toc-number">2.3.2.</span> <span class="toc-text">最好情况$O(N)$，最坏情况$O(N^2)$算法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%86%E6%9E%90-2"><span class="toc-number">2.3.2.1.</span> <span class="toc-text">分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#O-N-%E7%AE%97%E6%B3%95"><span class="toc-number">2.4.</span> <span class="toc-text">$O(N)$算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93"><span class="toc-number">2.5.</span> <span class="toc-text">小结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%99%84%E5%BD%95-%E5%AF%B9%E4%B9%A6%E4%B8%AD-O-N-log-N-%E7%AE%97%E6%B3%95%E7%9A%84%E4%BC%98%E5%8C%96"><span class="toc-number">3.</span> <span class="toc-text">附录 对书中$O(N\log N)$算法的优化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E6%9E%90-3"><span class="toc-number">3.1.</span> <span class="toc-text">分析</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/0.html" title="无标题">无标题</a><time datetime="2025-01-09T02:00:20.280Z" title="发表于 2025-01-09 02:00:20">2025-01-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/4a17b156.html" title="Hello World">Hello World</a><time datetime="2025-01-09T02:00:20.277Z" title="发表于 2025-01-09 02:00:20">2025-01-09</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2024 - 2025 By Haoming Liu</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><div class="aplayer no-destroy" data-id="13044010199" data-server="netease" data-type="playlist"   data-order="list" data-fixed="true" data-preload="auto" data-autoplay="false" data-mutex="true" ></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
